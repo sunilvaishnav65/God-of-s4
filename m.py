@@ -223,7 +223,7 @@ def handle_bgmi(message):
         # Check if the user is in admin_id (admins have no cooldown)
         if user_id not in admin_id:
             # Check if the user has run the command before and is still within the cooldown period
-            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 5:
+            if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 1:
                 response = "👍𝘼𝙏𝙏𝘼𝘾𝙆 𝘿𝙊𝙉𝙀👍 𝙈𝘼𝙎𝙎𝘼𝙂𝙀 𝘼𝘼𝙉𝙀 𝙆𝙀 𝘽𝘼𝘼𝘿 𝙏𝙍𝙔 𝙆𝙍𝙊"
                 bot.reply_to(message, response)
                 return
